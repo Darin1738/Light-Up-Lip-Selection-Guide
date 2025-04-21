@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistry Go Vibrant Light Up Lip Products - Complete Guide</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdf6f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .slide-container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            background: linear-gradient(135deg, #fff9fc 0%, #f3e9ec 100%);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        @media (min-width: 768px) {
+            .slide-container {
+                padding: 40px;
+            }
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        .accent-bg {
+            background: linear-gradient(135deg, #ffcce0 0%, #f8e1ff 100%);
+        }
+        .accent-border {
+            border: 2px solid #ffcce0;
+        }
+        .lip-icon {
+            background-color: #fff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 0 auto 20px;
+        }
+        @media (min-width: 768px) {
+            .lip-icon {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        .heading-gradient {
+            background: linear-gradient(90deg, #d84e85, #a74a9c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .color-swatch {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 3px;
+            border: 2px solid white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        @media (min-width: 640px) {
+            .color-swatch {
+                width: 30px;
+                height: 30px;
+                margin: 0 5px;
+            }
+        }
+        .color-card {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .color-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        .color-swatch-large {
+            height: 80px;
+            width: 100%;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            margin-bottom: 10px;
+        }
+        @media (min-width: 768px) {
+            .color-swatch-large {
+                height: 100px;
+            }
+        }
+        .color-swatch-xl {
+            height: 100px;
+            width: 100%;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            margin-bottom: 10px;
+        }
+        @media (min-width: 768px) {
+            .color-swatch-xl {
+                height: 120px;
+            }
+        }
+        .product-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            object-position: center;
+        }
+        .swatch-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        .page-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .page-btn {
+            background-color: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .page-btn:hover, .page-btn.active {
+            background-color: #f8e1ff;
+            border-color: #d84e85;
+            color: #d84e85;
+        }
+        .feature-pill {
+            white-space: nowrap;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body class="py-4 md:py-8">
+    <div class="slide-container mx-auto">
+        <!-- Page Navigation -->
+        <div class="page-nav">
+            <div class="page-btn active" onclick="showPage(1)">1</div>
+            <div class="page-btn" onclick="showPage(2)">2</div>
+            <div class="page-btn" onclick="showPage(3)">3</div>
+        </div>
+
+        <!-- Page 1: Overview -->
+        <div id="page1" class="page active">
+            <!-- Header -->
+            <div class="text-center mb-6 md:mb-10">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2 md:mb-3 heading-gradient">Artistry Go Vibrant™</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-4 md:mb-6">Light Up Lip Products Selection Guide</h2>
+                <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto px-2">
+                    Beautiful lips that glow! Choose your perfect shade from our premium Light Up Lip collection featuring built-in LED lights and mirrors for on-the-go application.
+                </p>
+            </div>
+
+            <!-- Product Categories -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-6 md:mt-8">
+                <!-- Plumper -->
+                <div class="product-card flex flex-col">
+                    <div class="accent-bg p-4 md:p-6 text-center">
+                        <div class="lip-icon">
+                            <i class="fas fa-tint text-pink-500 text-2xl md:text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800">Light Up Liquid Lip Plumper</h3>
+                        <p class="mt-2 text-sm md:text-base text-gray-600">Hydrating formula with high-shine finish</p>
+                    </div>
+                    <div class="p-4 md:p-6 flex-grow flex flex-col justify-between">
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Features:</h4>
+                            <ul class="list-disc pl-5 text-gray-700 text-xs md:text-sm">
+                                <li>Non-sticky feel</li>
+                                <li>Lips appear softer, smoother & fuller</li>
+                                <li>Over 90% naturally derived ingredients</li>
+                                <li>8-hour wear</li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-4">
+                            <p class="font-medium mb-2 text-sm md:text-base">Available in 1 shade:</p>
+                            <div class="flex justify-center">
+                                <div class="color-swatch" style="background-color: #fbd7c8;" title="Plumper Shade"></div>
+                            </div>
+                            <p class="text-xs mt-2 text-gray-500">Universally flattering shade</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Matte -->
+                <div class="product-card flex flex-col">
+                    <div class="accent-bg p-4 md:p-6 text-center">
+                        <div class="lip-icon">
+                            <i class="fas fa-fire text-pink-500 text-2xl md:text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800">Light Up Liquid Lip Matte</h3>
+                        <p class="mt-2 text-sm md:text-base text-gray-600">Velvety-matte finish with rich pigment</p>
+                    </div>
+                    <div class="p-4 md:p-6 flex-grow flex flex-col justify-between">
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Features:</h4>
+                            <ul class="list-disc pl-5 text-gray-700 text-xs md:text-sm">
+                                <li>Lightweight formula</li>
+                                <li>Glides on evenly & effortlessly</li>
+                                <li>Built-in LED light & mirror</li>
+                                <li>10-hour wear</li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-4">
+                            <p class="font-medium mb-2 text-sm md:text-base">Available in 5 shades:</p>
+                            <div class="flex justify-center flex-wrap">
+                                <div class="color-swatch" style="background-color: #8c3c3e;" title="Blushing Merlot"></div>
+                                <div class="color-swatch" style="background-color: #ff5a5f;" title="Dragon Fruit Delight"></div>
+                                <div class="color-swatch" style="background-color: #663366;" title="Midnight Orchid"></div>
+                                <div class="color-swatch" style="background-color: #7c4c3e;" title="Mocha Crush"></div>
+                                <div class="color-swatch" style="background-color: #da614e;" title="Pepper Pout"></div>
+                            </div>
+                            <p class="text-xs mt-2 text-gray-500">See next page for matte shade details</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Glow -->
+                <div class="product-card flex flex-col">
+                    <div class="accent-bg p-4 md:p-6 text-center">
+                        <div class="lip-icon">
+                            <i class="fas fa-sparkles text-pink-500 text-2xl md:text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-800">Light Up Liquid Lip Glow</h3>
+                        <p class="mt-2 text-sm md:text-base text-gray-600">Lustrous, glowy finish with hydration</p>
+                    </div>
+                    <div class="p-4 md:p-6 flex-grow flex flex-col justify-between">
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Features:</h4>
+                            <ul class="list-disc pl-5 text-gray-700 text-xs md:text-sm">
+                                <li>Glides on like a gloss</li>
+                                <li>Enriched vitamin complex</li>
+                                <li>Moisturizing ceramide & hyaluronic acid</li>
+                                <li>10-hour wear</li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-4">
+                            <p class="font-medium mb-2 text-sm md:text-base">Available in 4 shades:</p>
+                            <div class="flex justify-center flex-wrap">
+                                <div class="color-swatch" style="background-color: #8c6954;" title="Choco Bean"></div>
+                                <div class="color-swatch" style="background-color: #e8a08e;" title="Desert Rose"></div>
+                                <div class="color-swatch" style="background-color: #e14e76;" title="Fuchsia Bloom"></div>
+                                <div class="color-swatch" style="background-color: #b02d43;" title="Kiss Me Cranberry"></div>
+                            </div>
+                            <p class="text-xs mt-2 text-gray-500">See page 3 for glow shade details</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="text-center mt-6 md:mt-10">
+                <p class="text-gray-500 text-sm">Page 1 of 3 - Overview</p>
+                <p class="text-pink-600 font-medium mt-1 text-sm">Continue to next page to select your perfect shade</p>
+            </div>
+        </div>
+
+        <!-- Page 2: Matte Shades -->
+        <div id="page2" class="page">
+            <!-- Header -->
+            <div class="text-center mb-6">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2 md:mb-3 heading-gradient">Artistry Go Vibrant™</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-3 md:mb-4">Light Up Liquid Lip Matte</h2>
+                <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto px-2">
+                    Velvety-matte finish with rich pigment that lasts 10 hours. Featuring built-in LED light and mirror for perfect application anywhere.
+                </p>
+            </div>
+
+            <!-- Feature Highlights -->
+            <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-6">
+                <div class="feature-pill bg-white px-3 md:px-5 py-1 md:py-2 rounded-full shadow-sm flex items-center">
+                    <i class="fas fa-feather text-pink-500 mr-1 md:mr-2"></i>
+                    <span class="text-xs md:text-sm">Lightweight</span>
+                </div>
+                <div class="feature-pill bg-white px-3 md:px-5 py-1 md:py-2 rounded-full shadow-sm flex items-center">
+                    <i class="fas fa-lightbulb text-pink-500 mr-1 md:mr-2"></i>
+                    <span class="text-xs md:text-sm">LED Light</span>
+                </div>
+                <div class="feature-pill bg-white px-3 md:px-5 py-1 md:py-2 rounded-full shadow-sm flex items-center">
+                    <i class="fas fa-clock text-pink-500 mr-1 md:mr-2"></i>
+                    <span class="text-xs md:text-sm">10-Hour Wear</span>
+                </div>
+                <div class="feature-pill bg-white px-3 md:px-5 py-1 md:py-2 rounded-full shadow-sm flex items-center">
+                    <i class="fas fa-tint-slash text-pink-500 mr-1 md:mr-2"></i>
+                    <span class="text-xs md:text-sm">Non-Sticky</span>
+                </div>
+            </div>
+
+            <!-- Color Options -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 mt-6 md:mt-8">
+                <!-- Blushing Merlot -->
+                <div class="color-card">
+                    <div class="color-swatch-large" style="background-color: #8c3c3e;"></div>
+                    <div class="p-3 md:p-4 text-center">
+                        <h3 class="font-semibold text-sm md:text-base">Blushing Merlot</h3>
+                        <p class="text-xs text-gray-600 mt-1">Code: 206</p>
+                        <div class="mt-2 md:mt-3">
+                            <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full">Deep Berry</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dragon Fruit Delight -->
+                <div class="color-card">
+                    <div class="color-swatch-large" style="background-color: #ff5a5f;"></div>
+                    <div class="p-3 md:p-4 text-center">
+                        <h3 class="font-semibold text-sm md:text-base">Dragon Fruit Delight</h3>
+                        <p class="text-xs text-gray-600 mt-1">Code: 204</p>
+                        <div class="mt-2 md:mt-3">
+                            <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full">Bright Coral</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Midnight Orchid -->
+                <div class="color-card">
+                    <div class="color-swatch-large" style="background-color: #663366;"></div>
+                    <div class="p-3 md:p-4 text-center">
+                        <h3 class="font-semibold text-sm md:text-base">Midnight Orchid</h3>
+                        <p class="text-xs text-gray-600 mt-1">Code: 201</p>
+                        <div class="mt-2 md:mt-3">
+                            <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Deep Purple</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mocha Crush -->
+                <div class="color-card">
+                    <div class="color-swatch-large" style="background-color: #7c4c3e;"></div>
+                    <div class="p-3 md:p-4 text-center">
+                        <h3 class="font-semibold text-sm md:text-base">Mocha Crush</h3>
+                        <p class="text-xs text-gray-600 mt-1">Code: 202</p>
+                        <div class="mt-2 md:mt-3">
+                            <span class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Rich Brown</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pepper Pout -->
+                <div class="color-card">
+                    <div class="color-swatch-large" style="background-color: #da614e;"></div>
+                    <div class="p-3 md:p-4 text-center">
+                        <h3 class="font-semibold text-sm md:text-base">Pepper Pout</h3>
+                        <p class="text-xs text-gray-600 mt-1">Code: 203</p>
+                        <div class="mt-2 md:mt-3">
+                            <span class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Warm Terracotta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application Tips -->
+            <div class="mt-6 md:mt-8 bg-white p-4 md:p-5 rounded-xl shadow-sm">
+                <h3 class="font-bold text-gray-800 text-base md:text-lg mb-2">Application Tips:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 text-xs md:text-sm">
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-pink-500 mt-1 mr-2 flex-shrink-0"></i>
+                        <p>Start with clean, moisturized lips for smooth application</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-pink-500 mt-1 mr-2 flex-shrink-0"></i>
+                        <p>Use the precision tip to outline lips before filling in</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-pink-500 mt-1 mr-2 flex-shrink-0"></i>
+                        <p>Layer with Light Up Lip Glow for extra dimension</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="text-center mt-6">
+                <p class="text-gray-500 text-sm">Page 2 of 3 - Matte Lip Colors</p>
+                <p class="text-xs mt-2 text-gray-600">
+                    <i class="fas fa-link text-pink-400 mr-1"></i>
+                    <a href="https://www.amway.com/en_US/Artistry-Go-Vibrant%E2%84%A2-Light-Up-Liquid-Lip-Matte---Pepper-Pout-203-p-127478D" class="text-pink-500 hover:underline">Shop Artistry Go Vibrant™ Light Up Liquid Lip Matte</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Page 3: Glow Shades -->
+        <div id="page3" class="page">
+            <!-- Header -->
+            <div class="text-center mb-6">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2 md:mb-3 heading-gradient">Artistry Go Vibrant™</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-3 md:mb-4">Light Up Liquid Lip Glow</h2>
+                <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto px-2">
+                    Lustrous, glowy finish with 10-hour wear. Enriched with vitamins and moisturizing ceramide and hyaluronic acid.
+                </p>
+            </div>
+
+            <!-- Feature Highlights -->
+            <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-6">
+                <div class="feature-pill bg-white px-3 md:px-5 py-1 md:py-2 rounded-full shadow-sm flex items-center">
+                    <i class="fas fa-sparkles text-pink-500 mr-1 md:mr-2"></i>
+                    <span class="text-xs md:text-sm">Glowy Finish</span>
+                </div>
+                <div class="feature-pill bg-white px-3 md:px-5 py-1 md:py-2 rounded-full shadow-sm flex items-center">
+                    <i class="fas fa-lightbulb text-pink-500 mr-1 md:mr-2"></i>
+                    <span class="text-xs md:text-sm">LED Light</span>
+                </div>
+                <div class="feature-pill bg-white px-3 md:px-5 py-1 md:py-2 rounded-full shadow-sm flex items-center">
+                    <i class="fas fa-clock text-pink-500 mr-1 md:mr-2"></i>
+                    <span class="text-xs md:text-sm">10-Hour Wear</span>
+                </div>
+                <div class="feature-pill bg-white px-3 md:px-5 py-1 md:py-2 rounded-full shadow-sm flex items-center">
+                    <i class="fas fa-droplet text-pink-500 mr-1 md:mr-2"></i>
+                    <span class="text-xs md:text-sm">Hydrating</span>
+                </div>
+            </div>
+
+            <!-- Color Options -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mt-6 md:mt-8">
+                <!-- Choco Bean -->
+                <div class="color-card">
+                    <div class="color-swatch-xl" style="background-color: #8c6954;"></div>
+                    <div class="p-4 md:p-5">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 md:mb-3">
+                            <h3 class="font-semibold text-lg md:text-xl">Choco Bean</h3>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 md:px-3 py-1 rounded-full mt-1 sm:mt-0">Code: 104</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-gray-600">A rich chocolate brown with warm undertones, perfect for a sophisticated everyday look.</p>
+                        <div class="mt-3 md:mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-2 sm:space-y-0">
+                            <span class="text-xs text-gray-500">
+                                <i class="fas fa-user-group mr-1"></i> Best for warm undertones
+                            </span>
+                            <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full">Warm Brown</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desert Rose -->
+                <div class="color-card">
+                    <div class="color-swatch-xl" style="background-color: #e8a08e;"></div>
+                    <div class="p-4 md:p-5">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 md:mb-3">
+                            <h3 class="font-semibold text-lg md:text-xl">Desert Rose</h3>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 md:px-3 py-1 rounded-full mt-1 sm:mt-0">Code: 102</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-gray-600">A subtle peachy-pink shade with a hint of warmth, ideal for natural daytime elegance.</p>
+                        <div class="mt-3 md:mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-2 sm:space-y-0">
+                            <span class="text-xs text-gray-500">
+                                <i class="fas fa-user-group mr-1"></i> Universal flattering
+                            </span>
+                            <span class="inline-block bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Peachy Pink</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fuchsia Bloom -->
+                <div class="color-card">
+                    <div class="color-swatch-xl" style="background-color: #e14e76;"></div>
+                    <div class="p-4 md:p-5">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 md:mb-3">
+                            <h3 class="font-semibold text-lg md:text-xl">Fuchsia Bloom</h3>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 md:px-3 py-1 rounded-full mt-1 sm:mt-0">Code: 105</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-gray-600">A vibrant pink-purple hue that adds a bold pop of color and youthful energy.</p>
+                        <div class="mt-3 md:mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-2 sm:space-y-0">
+                            <span class="text-xs text-gray-500">
+                                <i class="fas fa-user-group mr-1"></i> Best for cool undertones
+                            </span>
+                            <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full">Vibrant Pink</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kiss Me Cranberry -->
+                <div class="color-card">
+                    <div class="color-swatch-xl" style="background-color: #b02d43;"></div>
+                    <div class="p-4 md:p-5">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 md:mb-3">
+                            <h3 class="font-semibold text-lg md:text-xl">Kiss Me Cranberry</h3>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 md:px-3 py-1 rounded-full mt-1 sm:mt-0">Code: 103</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-gray-600">A deep berry red with blue undertones, perfect for evening glamour or statement lips.</p>
+                        <div class="mt-3 md:mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-2 sm:space-y-0">
+                            <span class="text-xs text-gray-500">
+                                <i class="fas fa-user-group mr-1"></i> Dramatic statement
+                            </span>
+                            <span class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Berry Red</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beauty Tips -->
+            <div class="mt-6 md:mt-8 bg-white p-4 md:p-5 rounded-xl shadow-sm">
+                <h3 class="font-bold text-gray-800 text-base md:text-lg mb-2 md:mb-3">Pro Tips:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 text-xs md:text-sm">
+                    <div class="flex items-start">
+                        <i class="fas fa-magic text-pink-500 mt-1 mr-2 flex-shrink-0"></i>
+                        <p>Layer over matte lipstick for dimensional color</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-wand-magic-sparkles text-pink-500 mt-1 mr-2 flex-shrink-0"></i>
+                        <p>Apply to center of lips for a plumping effect</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-lightbulb text-pink-500 mt-1 mr-2 flex-shrink-0"></i>
+                        <p>Use LED light for precise application in low light</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="text-center mt-6">
+                <p class="text-gray-500 text-sm">Page 3 of 3 - Glow Lip Colors</p>
+                <p class="text-xs mt-2 text-gray-600">
+                    <i class="fas fa-link text-pink-400 mr-1"></i>
+                    <a href="https://www.amway.com/en_US/Artistry-Go-Vibrant%E2%84%A2-Light-Up-Liquid-Lip-Glow---Fuchsia-Bloom-105-p-127601D" class="text-pink-500 hover:underline">Shop Artistry Go Vibrant™ Light Up Liquid Lip Glow</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageNum) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById('page' + pageNum).classList.add('active');
+            
+            // Update buttons
+            const buttons = document.querySelectorAll('.page-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Activate current button
+            buttons[pageNum-1].classList.add('active');
+        }
+    </script>
+</body>
+</html>
